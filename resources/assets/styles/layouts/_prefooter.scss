@@ -1,0 +1,46 @@
+.site-pre-footer {
+  background-color: $dark-gray;
+  padding: $base-spacing 0;
+}
+
+.pre-footer-social {
+  text-align: center;
+}
+
+.pre-footer-social-icons,
+.pre-footer-social-header {
+  display: inline-block;
+  vertical-align: text-top;
+}
+
+.pre-footer-social-header {
+  margin-bottom: 0;
+  margin-right: $base-spacing;
+  color: $light-gray;
+  display: none;
+
+  @media screen and (min-width: $medium-screen) {
+    display: inline-block;
+  }
+}
+
+.pre-footer-social-icons {
+  a {
+    color: transparent;
+    display: inline-block;
+    margin-right: $small-spacing;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  svg {
+    width: $base-spacing;
+    height: $base-spacing;
+
+    path {
+      fill: white;
+    }
+  }
+}

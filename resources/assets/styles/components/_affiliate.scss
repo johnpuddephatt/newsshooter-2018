@@ -1,0 +1,124 @@
+.affiliate-wrapper {
+  border: none;
+}
+
+.affiliate-item--column--left,
+.affiliate-item--column--center {
+  margin-bottom: 0;
+}
+
+.affiliate-item {
+  flex-direction: row;
+  text-align: left;
+  border-bottom: $base-border;
+  margin: 0;
+  padding: $base-spacing 0;
+  display: flex;
+  align-items: center;
+}
+
+.affiliate-item--column--left {
+  flex: 0 0 6 * $base-spacing;
+  margin-right: $base-spacing;
+  margin-bottom: $small-spacing;
+}
+
+.affiliate-item--image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.affiliate-item--title {
+  line-height: $heading-line-height;
+  color: $blue;
+  font-weight: 500;
+  font-size: modular-scale(0);
+}
+
+.affiliate-item--abel-logo {
+  display: block;
+  margin: 0 auto $small-spacing;
+  height: $base-spacing;
+}
+
+.affiliate-item--button {
+  display: block;
+  text-align: center;
+  background-color: $red;
+  text-decoration: none;
+  color: white;
+}
+
+.affiliate-item--button:hover {
+  background-color: darken($red, 5%);
+  color: white;
+}
+
+.affiliate-item--column--right {
+  flex: 0 1 6.5 * $base-spacing;
+  margin-left: $small-spacing;
+
+  @media screen and (min-width: $medium-screen) {
+    margin-left: $base-spacing;
+  }
+}
+
+.affiliate-item--column--center {
+  flex: 1 1 auto;
+  margin-bottom: $small-spacing;
+}
+
+.affiliate-item--details {
+  font-size: modular-scale(1);
+}
+
+.affiliate-item--details span {
+  display: inline-block;
+}
+
+.affiliate-item--about {
+  font-size: modular-scale(-1);
+  color: $light-gray;
+  margin-top: $small-spacing;
+  vertical-align: middle;
+}
+
+.affiliate-item--learn {
+  text-decoration: none;
+}
+
+.affiliate-item--learn span {
+  display: inline-block;
+  overflow: hidden;
+  text-align: center;
+  color: white;
+  font-size: modular-scale(-1);
+  border-radius: 1em;
+  width: $small-spacing;
+  height: $small-spacing;
+  background-color: $light-gray;
+  -webkit-font-smoothing: antialiased;
+  vertical-align: middle;
+  line-height: 1.15;
+  font-weight: 500;
+}
+
+.affiliate-item--learn:hover {
+  color: $medium-gray;
+}
+
+.affiliate-item--details span + span {
+  margin-left: $small-spacing/2;
+  background-color: $light-blue;
+  color: white;
+  padding: 0 0.5em;
+  font-size: 60%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.affiliate-item--learn:hover span {
+  background-color: $blue;
+  color: white;
+}

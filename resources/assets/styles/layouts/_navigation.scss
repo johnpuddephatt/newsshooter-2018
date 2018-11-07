@@ -1,0 +1,33 @@
+.primary-navigation--wrapper {
+  background-color: white;
+  border-bottom: $base-border;
+  margin-bottom: $base-spacing;
+}
+
+.primary-navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: $small-spacing 0;
+
+  a {
+    color: $dark-gray;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 600;
+
+    &:hover {
+      color: $black;
+    }
+
+    &:active:focus {
+      outline: none !important;
+      color: $black;
+      text-decoration: none;
+    }
+  }
+
+  li + li {
+    margin-left: 2 * $base-spacing;
+  }
+}

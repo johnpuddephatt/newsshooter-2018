@@ -1,0 +1,55 @@
+.entry--author-box {
+  border-top: $base-border;
+  border-bottom: $base-border;
+  padding-top: $base-spacing;
+  padding-bottom: $base-spacing;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.entry--author-box--image {
+  height: 6 * $base-spacing;
+  width: 6 * $base-spacing;
+  border-radius: 50%;
+  overflow: hidden;
+  float: left;
+  margin-right: $base-spacing;
+  flex: 0 0 auto;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.entry--author-box--content {
+  overflow: hidden;
+  font-size: modular-scale(-1);
+}
+
+.entry--author-box--name {
+  color: $blue;
+  display: block;
+  font-weight: 500;
+  margin-bottom: $small-spacing;
+  text-decoration: none;
+  font-size: modular-scale(1);
+
+  .tag {
+    @extend #{$all-buttons};
+
+    margin-left: $small-spacing;
+  }
+}
+
+.entry--author-box--social {
+  a {
+    text-decoration: none;
+    margin-right: $small-spacing;
+    display: inline-block;
+    font-size: modular-scale(2);
+  }
+}

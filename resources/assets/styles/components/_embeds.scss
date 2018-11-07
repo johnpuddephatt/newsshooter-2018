@@ -1,0 +1,50 @@
+.aligncenter {
+  display: block;
+  margin: $base-spacing auto !important;
+}
+
+.embed-responsive {
+  position: relative;
+  padding-top: 56.25%;
+  margin-top: $base-spacing;
+  margin-bottom: $base-spacing;
+
+  &:first-child {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.fb-video.fb_iframe_widget {
+  width: 100%;
+  padding-top: 56.25%;
+  margin-top: $base-spacing;
+  margin-bottom: $base-spacing;
+  position: relative;
+  display: block;
+
+  span {
+    position: static;
+    height: 0 !important;
+  }
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100% !important;
+    height: 100% !important;
+  }
+}

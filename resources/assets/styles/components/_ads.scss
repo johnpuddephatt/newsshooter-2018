@@ -1,0 +1,14 @@
+[id^=div-gpt-ad] {
+  margin: 0 auto $base-spacing;
+}
+
+[id^=google_ads_iframe] {
+  display: block !important;
+  margin: 0 auto;
+}
+
+.widget_text.custom_html-3 {
+  position: sticky;
+  top: $base-spacing;
+  padding-bottom: $small-spacing;
+}

@@ -1,0 +1,60 @@
+$small-screen: 460px; // iPhone Plus models
+$medium-screen: 800px; // Landscape iPad or portrait iPad pro
+$large-screen: 1080px; // Macbook 13
+$xl-screen: 1400px; // Full desktop
+
+// Typography
+$base-font-family: $font-stack-system;
+$heading-font-family: $base-font-family;
+
+// Line height
+$base-line-height: 1.5;
+$heading-line-height: 1.2;
+
+// Other Sizes
+$base-border-radius: 3px;
+$base-spacing: 1.5rem;
+$small-spacing: $base-spacing / 2;
+$base-z-index: 0;
+$wide-letter-spacing: 0.075em;
+
+// Colors
+$blue: #576f7b;
+$dark-blue: #455E6A;
+$light-blue: #BBC6CA;
+
+$red: #F90930;
+$black: #0f0f0f;
+$dark-gray: #272727;
+$medium-gray: #606060;
+$light-gray: #a2a2a2;
+$feint-gray: #ededed;
+$off-white: #f2f2f2;
+
+
+
+// Font Colors
+$base-font-color: $dark-gray;
+$action-color: $blue;
+
+// Border
+$base-border-color: $light-gray;
+$base-border: $off-white solid 2px;
+$thin-border: $off-white solid 1px;
+
+
+// Shadow
+$base-shadow: 0 $small-spacing   1.5 * $base-spacing rgba(0,0,0,.07);
+
+// Background Colors
+$viewport-background-color: #fff;
+
+// Focus
+$focus-outline-color: transparentize($action-color, 0.4);
+$focus-outline-width: 3px;
+$focus-outline: $focus-outline-width solid $focus-outline-color;
+$focus-outline-offset: 2px;
+
+// Animations
+$base-duration: 250ms;
+$base-timing: ease-in-out;

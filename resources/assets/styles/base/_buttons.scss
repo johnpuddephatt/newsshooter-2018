@@ -1,0 +1,66 @@
+$_button-background-color: $action-color;
+$_button-background-color-hover: shade($action-color, 20%);
+
+#{$all-buttons} {
+  appearance: none;
+  background-color: $_button-background-color;
+  border: 0;
+  color: contrast-switch($_button-background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: $base-font-family;
+  font-size: modular-scale(-1);
+  border-radius: $base-border-radius;
+  // -webkit-font-smoothing: antialiased;
+  font-weight: 500;
+  line-height: 1;
+  padding: $small-spacing $base-spacing;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color $base-duration $base-timing;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  &:hover {
+    background-color: $_button-background-color-hover;
+    color: contrast-switch($_button-background-color-hover);
+  }
+
+  &:focus {
+    outline: $focus-outline;
+    outline-offset: $focus-outline-offset;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+
+    &:hover {
+      background-color: $_button-background-color;
+    }
+  }
+  &.small {
+    font-size: modular-scale(-1);
+    padding: $small-spacing/2 $small-spacing;
+  }
+  &.very-small {
+    font-size: modular-scale(-2);
+    padding: $small-spacing/2 $small-spacing;
+  }
+  &.ghost {
+    background-color: transparent;
+    color: $action-color;
+    border: $base-border;
+    border-color: $blue;
+    &:hover {
+      background-color: $blue;
+      color: white;
+    }
+  }
+  &.is-light {
+    background-color: transparent;
+    border: 1px solid $blue;
+    color: $blue
+  }
+}

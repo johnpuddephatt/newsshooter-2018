@@ -1,0 +1,31 @@
+.svg-inline--fa {
+  display: inline-block;
+  font-size: inherit;
+  height: 1em;
+  overflow: visible;
+  vertical-align: -0.125em;
+}
+
+.sharing-icons--wrapper {
+  text-align: right;
+  border-top: $base-border;
+  color: $blue;
+  line-height: 2 * $base-spacing;
+  position: sticky;
+  top: calc(100% - #{ 2 * $base-spacing });
+  margin-top: -$base-spacing;
+  margin-bottom: 0;
+  z-index: 99;
+  background-color: white;
+}
+
+.sharing-icons {
+  float: right;
+  padding-right: $small-spacing;
+}
+
+.sharing-icons--icon {
+  float: left;
+  font-size: modular-scale(2);
+  margin-left: $base-spacing;
+}

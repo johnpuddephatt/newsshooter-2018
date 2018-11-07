@@ -1,0 +1,91 @@
+/*
+** Site footer
+*/
+
+.site-footer {
+  background-color: $black;
+  padding-top: $base-spacing;
+  padding-bottom: $base-spacing;
+  text-align: center;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: $medium-screen) {
+      @include grid-container;
+
+      display: block;
+    }
+  }
+
+  @media screen and (min-width: $medium-screen) {
+    text-align: left;
+    padding-top: 3 * $base-spacing;
+    padding-bottom: 2 * $base-spacing;
+  }
+}
+
+.site-footer--about {
+  font-size: modular-scale(-1);
+  padding-left: $base-spacing;
+  padding-right: $base-spacing;
+
+  @media screen and (min-width: $medium-screen) {
+    padding-left: 0;
+    padding-right: 0;
+
+    @include grid-column(5);
+
+    font-size: modular-scale(0);
+  }
+
+  color: $medium-gray;
+}
+
+.site-footer--about--header {
+  color: $light-gray;
+  margin-top: 0.5 * $base-spacing;
+  margin-bottom: $small-spacing;
+
+  @media screen and (min-width: $medium-screen) {
+    margin-right: $small-spacing;
+    margin-top: 1.5 * $base-spacing;
+    margin-bottom: $base-spacing;
+  }
+}
+
+.site-footer--about--logo {
+  width: 55%;
+  margin-top: 1.5 * $base-spacing;
+
+  @media screen and (min-width: $medium-screen) {
+    width: 20em;
+    margin-top: 0;
+  }
+}
+
+.site-footer--nav-left,
+.site-footer--nav-right {
+  order: -1;
+  margin-top: $small-spacing;
+
+  @media screen and (min-width: $medium-screen) {
+    @include grid-column(2);
+
+    margin-top: $base-spacing;
+  }
+
+  a {
+    color: $light-gray;
+    font-weight: 500;
+    line-height: 1.5 * $base-spacing;
+    text-decoration: none;
+  }
+}
+
+.site-footer--nav-left {
+  @media screen and (min-width: $medium-screen) {
+    @include grid-push(3);
+  }
+}
