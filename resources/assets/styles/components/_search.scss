@@ -4,6 +4,8 @@
   display: flex;
   flex-direction: row;
 
+  @include grid-column(12);
+
   label {
     flex: 1 1 auto;
     margin-bottom: 0;
@@ -68,10 +70,6 @@
   * {
     opacity: 0;
     transition: opacity $base-timing $base-duration;
-  }
-
-  .container {
-    @include grid-column(12);
   }
 }
 

@@ -8,7 +8,7 @@
 .entry-header {
   @include grid-column(12);
 
-  margin-bottom: $small-spacing;
+  margin-bottom: $base-spacing;
   float: none;
 
   .entry-category {

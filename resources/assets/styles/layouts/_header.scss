@@ -49,12 +49,16 @@
   padding: 0;
   margin: 0;
   text-decoration: none;
-  font-size: modular-scale(-1);
+  font-size: modular-scale(0);
   font-weight: 400;
   -webkit-font-smoothing: subpixel-antialiased;
 
   &:focus {
     outline: none;
+  }
+
+  &:hover {
+    color: $dark-gray;
   }
 
   .icon {

@@ -41,7 +41,7 @@ $_button-background-color-hover: shade($action-color, 20%);
     }
   }
   &.small {
-    font-size: modular-scale(-1);
+    font-size: modular-scale(-2);
     padding: $small-spacing/2 $small-spacing;
   }
   &.very-small {

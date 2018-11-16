@@ -30,14 +30,23 @@
         addSize([1080, 400], [300, 600]). // Desktop
         build();
 
+      var mainColumnAmapping = googletag.sizeMapping().
+        addSize([0, 0], [300, 250]).
+        addSize([1080, 400], []). // Desktop
+        build();
+
 
       var gptAdSlots = [];
 
-      gptAdSlots[0] = googletag.defineSlot('/98779178/POSITION_A_sidebar', [300, 250], 'div-gpt-ad-1538607848712-0').defineSizeMapping(sidebarAmapping).addService(googletag.pubads());
-      gptAdSlots[1] = googletag.defineSlot('/98779178/POSITION_B_SIDEBAR', [300, 600], 'div-gpt-ad-1538607896136-0').defineSizeMapping(sidebarBmapping).addService(googletag.pubads());
-      gptAdSlots[2] = googletag.defineSlot('/98779178/MASTHEAD', [[970, 90], [728, 90], [468, 60], [320, 100]], 'div-gpt-ad-1538608241498-0').defineSizeMapping(bannermapping).addService(googletag.pubads());
-      gptAdSlots[3] = googletag.defineSlot('/98779178/FOOTER', [[970, 90], [728, 90], [468, 60], [320, 100]], 'div-gpt-ad-1538607234909-0').defineSizeMapping(bannermapping).addService(googletag.pubads());
-      // googletag.pubads().enableSingleRequest();
+      gptAdSlots[0] = googletag.defineSlot('/98779178/MASTHEAD', [[970, 90], [728, 90], [468, 60], [320, 100]], 'div-gpt-ad-1538608241498-0').defineSizeMapping(bannermapping).addService(googletag.pubads());
+      gptAdSlots[1] = googletag.defineSlot('/98779178/FOOTER', [[970, 90], [728, 90], [468, 60], [320, 100]], 'div-gpt-ad-1538607234909-0').defineSizeMapping(bannermapping).addService(googletag.pubads());
+
+      gptAdSlots[2] = googletag.defineSlot('/98779178/POSITION_A_sidebar', [300, 250], 'div-gpt-ad-1538607848712-0').defineSizeMapping(sidebarAmapping).addService(googletag.pubads());
+      gptAdSlots[3] = googletag.defineSlot('/98779178/POSITION_A_MAINCOLUMN', [300, 250], 'div-gpt-ad-1541642158566-0').defineSizeMapping(mainColumnAmapping).addService(googletag.pubads());
+      gptAdSlots[4] = googletag.defineSlot('/98779178/POSITION_B_SIDEBAR', [300, 600], 'div-gpt-ad-1538607896136-0').defineSizeMapping(sidebarBmapping).addService(googletag.pubads());
+      gptAdSlots[5] = googletag.defineSlot('/98779178/POSITION_C_SIDEBAR', [300, 250], 'div-gpt-ad-1541641714738-0').defineSizeMapping(sidebarAmapping).addService(googletag.pubads());
+
+      googletag.pubads().enableSingleRequest();
       googletag.pubads().collapseEmptyDivs();
       googletag.enableServices();
     });

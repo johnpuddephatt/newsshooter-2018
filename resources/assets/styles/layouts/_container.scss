@@ -16,5 +16,9 @@
 }
 
 .wrap {
-  margin-bottom: $base-spacing;
+  margin-bottom: $small-spacing;
+
+  @media screen and (min-width: $xl-screen) {
+    margin-bottom: $base-spacing;
+  }
 }

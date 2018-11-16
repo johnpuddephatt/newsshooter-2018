@@ -1,5 +1,9 @@
 [id^=div-gpt-ad] {
-  margin: 0 auto $base-spacing;
+  margin: 0 auto $small-spacing;
+
+  @media screen and (min-width: $xl-screen) {
+    margin: 0 auto $base-spacing;
+  }
 }
 
 [id^=google_ads_iframe] {
@@ -7,7 +11,8 @@
   margin: 0 auto;
 }
 
-.widget_text.custom_html-3 {
+.entry-sidebar > .widget_text:last-child,
+.homepage-sidebar__part-two > .widget_text:last-child {
   position: sticky;
   top: $base-spacing;
   padding-bottom: $small-spacing;

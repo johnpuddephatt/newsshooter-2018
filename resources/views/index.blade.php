@@ -2,21 +2,23 @@
 
 @section('content')
 
-  @php $do_not_duplicate = [] @endphp
+  @php
+    $do_not_duplicate = [];
+    $loop_index = 0;
+  @endphp
 
   @if(is_home() && !is_paged())
     @php
       global $wp_query;
       $acs = new Acs();
       $acs->query_posts(array('group_name' => 'Featured'));
-      $loop_index = 0;
     @endphp
 
 
     <div class="featured-posts">
       @while (have_posts())
         @php the_post() @endphp
-        @include('partials.content-'.get_post_type(), ['post_class' => 'featured-post featured-post__' . ($wp_query->current_post + 1),'thumbnail_size' => (($wp_query->current_post >= 1) ? '4by3-m' : '4by3-xl')])
+        @include('partials.content-'.get_post_type(), ['post_class' => 'featured-post featured-post__' . ($wp_query->current_post + 1),'thumbnail_size' => (($wp_query->current_post >= 1) ? '4by3-s' : '4by3-m')])
         @php $do_not_duplicate[] = get_the_id() @endphp
       @endwhile
     </div>
@@ -24,7 +26,7 @@
     @php wp_reset_query(); @endphp
   @endif
 
-  <p>BANNER AD HERE ON MOBILE</p>
+  @php dynamic_sidebar('mobile-content-a') @endphp
 
   <div class="home-wrapper">
     @if (!have_posts())
@@ -57,7 +59,7 @@
       @endwhile
 
       @if (!is_home())
-        <button id="more_posts" data-page="2" href="#" data-loading-text="Loading" data-default-text="Load more" >Load More</button>
+        <div class="post-navigation"><?php posts_nav_link(); ?></div>
       @endif
 
     </div>

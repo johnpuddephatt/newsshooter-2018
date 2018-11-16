@@ -118,6 +118,18 @@ add_action('widgets_init', function () {
         'name'          => __('After comments', 'sage'),
         'id'            => 'after-comments'
     ] + $config);
+    register_sidebar([
+        'name'          => __('Mobile content A', 'sage'),
+        'id'            => 'mobile-content-a'
+    ] + $config);
+    register_sidebar([
+        'name'          => __('Mobile content B', 'sage'),
+        'id'            => 'mobile-content-b'
+    ] + $config);
+    register_sidebar([
+        'name'          => __('Mobile content C', 'sage'),
+        'id'            => 'mobile-content-c'
+    ] + $config);
 
 });
 

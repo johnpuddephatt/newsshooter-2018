@@ -319,9 +319,10 @@ $gutterless-grid: (
     header {
       @media screen and (min-width: $medium-screen) {
         position: absolute;
+        width: 100%;
         bottom: 0;
         background-color: rgba(255, 255, 255, 0.95);
-        padding: $small-spacing $base-spacing $small-spacing;
+        padding: $small-spacing $small-spacing;
       }
     }
 
@@ -457,7 +458,7 @@ $gutterless-grid: (
 
         @media screen and (min-width: $medium-screen) {
           background-color: transparent;
-          padding: $small-spacing/2 0 0;
+          padding: $small-spacing/2 $small-spacing 0;
         }
       }
 
@@ -477,8 +478,16 @@ $gutterless-grid: (
         color: $light-gray;
       }
 
-      .entry-byline--name a {
+      .entry-byline--name {
         color: white;
+      }
+    }
+
+    &__2 {
+      border-bottom: $base-border;
+
+      @media screen and (min-width: $medium-screen) {
+        border-bottom: none;
       }
     }
   }

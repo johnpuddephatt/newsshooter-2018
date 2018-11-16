@@ -1,7 +1,11 @@
 .primary-navigation--wrapper {
   background-color: white;
   border-bottom: $base-border;
-  margin-bottom: $base-spacing;
+  margin-bottom: $small-spacing;
+
+  @media screen and (min-width: $xl-screen) {
+    margin-bottom: $base-spacing;
+  }
 }
 
 .primary-navigation {
