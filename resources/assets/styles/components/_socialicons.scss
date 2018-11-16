@@ -17,6 +17,17 @@
   margin-bottom: 0;
   z-index: 99;
   background-color: white;
+  margin-left: -$small-spacing;
+  margin-right: -$small-spacing;
+  padding-left: $small-spacing;
+  padding-right: $small-spacing;
+
+  @media screen and (min-width: $medium-screen) {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .sharing-icons {
