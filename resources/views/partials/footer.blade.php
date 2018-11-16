@@ -54,6 +54,7 @@
           <img class="site-footer--about--logo" src="@asset('images/NS_Logo_W.svg')" width="300" />
           <h3 class="site-footer--about--header">About {{ bloginfo('name') }}</h3>
           <p>{{ nl2br(bloginfo('description')) }}</p>
+          <p>&copy; Newsshooter {{ date("Y") }}</p>
         </div>
         <nav class="site-footer--nav-left">
           @if (has_nav_menu('footer_navigation_left'))
@@ -68,5 +69,3 @@
     </div>
   </div>
 </footer>
-
-

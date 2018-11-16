@@ -293,8 +293,13 @@ $gutterless-grid: (
   @extend #{$all-buttons};
 
   display: block;
-  width: 100%;
-  margin-top: $base-spacing;
+  width: calc(100% - #{$base-spacing});
+  margin: $small-spacing;
+
+  @media screen and (min-width: $medium-screen) {
+    margin: $base-spacing 0 0;
+    width: 100%;
+  }
 }
 
 .featured-posts {
@@ -372,16 +377,15 @@ $gutterless-grid: (
 
     .entry-category {
       background-color: $red;
-      position: absolute;
-      right: 60%;
       color: white;
-      display: inline-block;
       text-decoration: none;
       font-size: modular-scale(-2);
       padding: $small-spacing/8 $small-spacing/4;
       margin-bottom: $small-spacing/2;
+      display: none;
 
       @media screen and (min-width: $small-screen) {
+        display: inline-block;
         position: static;
         margin-bottom: $small-spacing;
         font-size: modular-scale(-1);

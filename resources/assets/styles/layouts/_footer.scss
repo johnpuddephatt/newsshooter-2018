@@ -37,7 +37,7 @@
 
     @include grid-column(5);
 
-    font-size: modular-scale(0);
+    font-size: modular-scale(-1);
   }
 
   color: $medium-gray;
