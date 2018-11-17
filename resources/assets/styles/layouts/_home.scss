@@ -237,13 +237,14 @@ $gutterless-grid: (
     position: absolute;
     right: 60%;
     color: white;
-    display: inline-block;
+    display: none;
     text-decoration: none;
     font-size: modular-scale(-2);
     padding: $small-spacing/8 $small-spacing/4;
     margin-bottom: $small-spacing/2;
 
     @media screen and (min-width: $small-screen) {
+      display: inline-block;
       position: static;
       margin-bottom: $small-spacing;
       font-size: modular-scale(-1);
