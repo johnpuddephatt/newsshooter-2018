@@ -1,3 +1,16 @@
 .post-navigation {
   margin-top: $base-spacing;
+  padding: $small-spacing;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+
+  > *:last-child {
+    margin-left: auto;
+  }
+
+  a {
+    @extend #{$all-buttons};
+  }
 }

@@ -1,0 +1,26 @@
+.page-header {
+  h1 {
+    font-size: modular-scale(3);
+    padding: $small-spacing;
+
+    @media screen and (min-width: $medium-screen) {
+      padding: $small-spacing 0 0;
+    }
+  }
+}
+
+body.page .main {
+  padding-left: $small-spacing;
+  padding-right: $small-spacing;
+
+  @media screen and (min-width: $medium-screen) {
+    @include grid-column(8);
+    @include grid-shift(2);
+
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  margin-top: 2 * $base-spacing;
+  margin-bottom: 2 * $base-spacing;
+}

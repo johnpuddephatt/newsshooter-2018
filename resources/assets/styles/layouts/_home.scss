@@ -489,7 +489,7 @@ $gutterless-grid: (
     }
 
     &__2 {
-      border-bottom: $base-border;
+      border-bottom: $thin-border;
 
       @media screen and (min-width: $medium-screen) {
         border-bottom: none;

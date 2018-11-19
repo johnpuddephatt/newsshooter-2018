@@ -17,6 +17,6 @@
       @endwhile
     </div>
 
-    {!! get_the_posts_navigation() !!}
+    <div class="post-navigation"><?php posts_nav_link(); ?></div>
   </div>
 @endsection
