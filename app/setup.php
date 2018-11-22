@@ -163,9 +163,19 @@ function more_post_ajax(){
   );
 
   $loop = new \WP_Query($args);
+  // Googletag ad slots 6 - 10 inclusive are for dynamically inserted homepage ads
+  if( $args['paged'] <= 6) {
+      echo '<br>';
+      echo '<div id="div-gpt-ad-1541642158566-' . ($args['paged'] + 4) . '" class="dfp-ad-unit" style="height:100px; width:320px;">';
+      echo '<script>gptAdSlots.push(googletag.defineSlot("/98779178/POSITION_A_MAINCOLUMN", [320, 100], "div-gpt-ad-1541642158566-' . ($args['paged'] + 4) . ').defineSizeMapping(mainColumnAmapping).addService(googletag.pubads());)</script>';
+      echo '</div>';
+  }
+
   while ($loop->have_posts()) { $loop->the_post();
     echo \App\template('partials.content-'.get_post_type(), ['post_class' => 'latest-post','thumbnail_size' => '16by9-xs']);
-  }
+    };
+
+
   exit;
  }
 
@@ -237,4 +247,22 @@ add_action('after_setup_theme', function () {
     sage('blade')->compiler()->directive('asset', function ($asset) {
         return "<?= " . __NAMESPACE__ . "\\asset_path({$asset}); ?>";
     });
+});
+
+
+
+/*
+** Custom styling on slideshows
+*/
+
+add_action('admin_head', function() {
+  echo '<style>
+      .sliderz {
+          flex-wrap: nowrap;
+          overflow-x: scroll;
+      }
+    .sliderz li {
+      flex: 0 0 auto !important;
+    }
+  </style>';
 });

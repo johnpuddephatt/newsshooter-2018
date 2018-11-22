@@ -29,6 +29,7 @@ export default {
           ajaxButton.innerText = ajaxButton.dataset.defaultText;
           ajaxButton.dataset.page = (parseInt(page) + 1);
           timeago().render(document.querySelectorAll('.timeago'));
+          window.googletag.pubads().refresh();
         } else {
           ajaxButton.removeAttribute("disabled");
           ajaxButton.innerText = ajaxButton.dataset.defaultText;

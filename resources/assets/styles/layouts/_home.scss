@@ -306,8 +306,12 @@ $gutterless-grid: (
 .featured-posts {
   @include grid-container;
 
-  margin-bottom: $base-spacing;
   box-shadow: $base-shadow;
+  margin-bottom: $small-spacing;
+
+  @media screen and (min-width: $medium-screen) {
+    margin-bottom: $base-spacing;
+  }
 
   .featured-post {
     position: relative;
