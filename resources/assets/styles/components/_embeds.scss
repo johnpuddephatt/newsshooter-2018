@@ -3,6 +3,31 @@
   margin: $base-spacing auto !important;
 }
 
+.alignright,
+.alignleft {
+  clear: both;
+  min-width: 17.5rem;
+  max-width: 50%;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+
+  img {
+    width: 100%;
+    display: block;
+    height: auto;
+  }
+}
+
+.alignright {
+  float: right;
+  margin-left: $base-spacing/2;
+}
+
+.alignleft {
+  float: left;
+  margin-right: $base-spacing/2;
+}
+
 .embed-responsive {
   position: relative;
   padding-top: 56.25%;

@@ -23,5 +23,46 @@ export default {
       }
     });
 
+    var pageGalleries = document.querySelectorAll('.wp-block-gallery');
+
+    if(pageGalleries) {
+      pageGalleries.forEach((galleryThumbs) => {
+        var galleryWrapper = document.createElement('div');
+        galleryWrapper.classList.add('gallery-wrapper');
+        // insert wrapper before el in the DOM tree
+        galleryThumbs.parentNode.insertBefore(galleryWrapper, galleryThumbs);
+        // move el into wrapper
+        galleryWrapper.appendChild(galleryThumbs);
+
+        var galleryStage = document.createElement('div');
+        galleryStage.classList.add('gallery-stage');
+        galleryThumbs.parentNode.insertBefore(galleryStage, galleryThumbs);
+
+        var firstImage = galleryThumbs.querySelector('img');
+        selectImage(firstImage);
+
+        galleryThumbs.addEventListener('click', (e)=>{
+          if(e.target.nodeName === 'IMG') {
+            selectImage(e.target.parentNode);
+          }
+        });
+      });
+    }
+
+    function selectImage(thumbnail) {
+
+      let thisGalleryWrapper = thumbnail.closest('.gallery-wrapper');
+      let thisStage = thisGalleryWrapper.querySelector('.gallery-stage');
+
+      let currentActive = thisGalleryWrapper.querySelectorAll('.is-active');
+      if(currentActive) currentActive.forEach((el) => { el.classList.remove('is-active') });
+
+      let thisClone = thumbnail.cloneNode(true);
+      thisStage.innerHTML = '';
+      thisStage.insertBefore(thisClone, null);
+
+      thumbnail.classList.add('is-active');
+
+    }
   },
 };
