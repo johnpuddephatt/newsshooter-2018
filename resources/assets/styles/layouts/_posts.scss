@@ -126,9 +126,13 @@
     padding-bottom: $small-spacing/2;
   }
 
-  td:first-child {
-    padding-left: $small-spacing/2;
-    font-weight: 700;
+  blockquote {
+    border-left: $small-spacing solid $blue;
+    padding: $base-spacing;
+  }
+
+  cite {
+    color: $medium-gray;
   }
 }
 

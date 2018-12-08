@@ -140,7 +140,7 @@ add_action('widgets_init', function () {
 
 add_image_size('large', get_option( 'large_size_w' ), get_option( 'large_size_h' ), true ); // Featured image on post, large in-post images
 add_image_size('medium_large', 480, 270, true );
-add_image_size('medium', get_option( 'medium_size_w' ), get_option( 'medium_size_h' ), true ); // In-post images
+// add_image_size('medium', get_option( 'medium_size_w' ), get_option( 'medium_size_h' ), true ); // In-post images
 
 // add_image_size( '4by3-xl', 1600, 1200, true );
 // add_image_size( '4by3-l', 1200, 900, true );

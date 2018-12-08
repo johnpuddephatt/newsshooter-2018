@@ -53,7 +53,7 @@
       @while (have_posts() && ($loop_index < $post_count))
         @php the_post() @endphp
         @if(!in_array( get_the_id(), $do_not_duplicate ))
-          @include('partials.content-'.get_post_type(), ['post_class' => 'latest-post', 'thumbnail_size'=> 'medium'])
+          @include('partials.content-'.get_post_type(), ['post_class' => 'latest-post', 'thumbnail_size'=> 'thumbnail'])
           @php $loop_index++ @endphp
         @endif
       @endwhile
@@ -99,7 +99,7 @@
         @while (have_posts() )
           @php the_post() @endphp
           @if(!in_array( get_the_id(), $do_not_duplicate ))
-            @include('partials.content-'.get_post_type(), ['post_class' => 'latest-post','thumbnail_size' => 'medium'])
+            @include('partials.content-'.get_post_type(), ['post_class' => 'latest-post','thumbnail_size' => 'thumbnail'])
           @endif
         @endwhile
 
