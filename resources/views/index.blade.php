@@ -53,7 +53,7 @@
       @while (have_posts() && ($loop_index < $post_count))
         @php the_post() @endphp
         @if(!in_array( get_the_id(), $do_not_duplicate ))
-          @include('partials.content-'.get_post_type(), ['post_class' => 'latest-post', 'thumbnail_size'=> '16by9-xs'])
+          @include('partials.content-'.get_post_type(), ['post_class' => 'latest-post', 'thumbnail_size'=> 'medium'])
           @php $loop_index++ @endphp
         @endif
       @endwhile
@@ -85,7 +85,7 @@
         <div class="editors-posts--wrap">
           @while (have_posts())
             @php the_post() @endphp
-            @include('partials.content-'.get_post_type(), ['post_class' => 'featured-post','thumbnail_size' => '16by9-s'])
+            @include('partials.content-'.get_post_type(), ['post_class' => 'featured-post','thumbnail_size' => 'medium_large'])
           @endwhile
         </div>
       </div>
@@ -99,7 +99,7 @@
         @while (have_posts() )
           @php the_post() @endphp
           @if(!in_array( get_the_id(), $do_not_duplicate ))
-            @include('partials.content-'.get_post_type(), ['post_class' => 'latest-post','thumbnail_size' => '16by9-xs'])
+            @include('partials.content-'.get_post_type(), ['post_class' => 'latest-post','thumbnail_size' => 'medium'])
           @endif
         @endwhile
 

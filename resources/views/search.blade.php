@@ -13,7 +13,7 @@
 
     <div class="search-results--posts latest-posts">
       @while(have_posts()) @php the_post() @endphp
-        @include('partials.content',['post_class' => 'latest-post','thumbnail_size' => '16by9-s'])
+        @include('partials.content',['post_class' => 'latest-post','thumbnail_size' => 'medium_large'])
       @endwhile
     </div>
 

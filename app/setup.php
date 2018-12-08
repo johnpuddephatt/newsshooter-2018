@@ -138,17 +138,21 @@ add_action('widgets_init', function () {
  * Additional image sizes
 **/
 
-add_image_size( '4by3-xl', 1600, 1200, true );
-add_image_size( '4by3-l', 1200, 900, true );
-add_image_size( '4by3-m', 800, 600, true );
-add_image_size( '4by3-s', 400, 300, true );
-add_image_size( '4by3-s', 200, 150, true );
+add_image_size('large', get_option( 'large_size_w' ), get_option( 'large_size_h' ), true ); // Featured image on post, large in-post images
+add_image_size('medium_large', 480, 270, true );
+add_image_size('medium', get_option( 'medium_size_w' ), get_option( 'medium_size_h' ), true ); // In-post images
 
-add_image_size( '16by9-xl', 1600, 900, true );
-add_image_size( '16by9-l', 1200, 675, true );
-add_image_size( '16by9-m', 800, 450, true );
-add_image_size( '16by9-s', 400, 225, true );
-add_image_size( '16by9-xs', 200, 112, true );
+// add_image_size( '4by3-xl', 1600, 1200, true );
+// add_image_size( '4by3-l', 1200, 900, true );
+add_image_size( '4by3-m', 800, 600, true ); // Featured image #1
+add_image_size( '4by3-s', 400, 300, true ); // Featured image #2
+add_image_size( '4by3-xs', 200, 150, true );
+
+// add_image_size( '16by9-xl', 1600, 900, true );
+// add_image_size( '16by9-l', 1200, 675, true );
+// add_image_size( '16by9-m', 800, 450, true );
+// add_image_size( '16by9-s', 400, 225, true ); // search results;  editor's picks
+// add_image_size( '16by9-xs', 240, 135, true ); //  homepage latest;
 
 /**
  * AJAX $loop

@@ -1,31 +1,50 @@
-.aligncenter {
-  display: block;
-  margin: $base-spacing auto !important;
+// .aligncenter {
+//   display: block;
+//   margin: $base-spacing auto !important;
+// }
+//
+// .alignright,
+// .alignleft {
+//   @media screen and (min-width: $small-screen) {
+//     clear: both;
+//     max-width: 50%;
+//   }
+//
+//   margin-top: 0.5em;
+//   margin-bottom: 0.5em;
+//
+//   img {
+//     width: 100%;
+//     display: block;
+//     height: auto;
+//   }
+// }
+//
+// @media screen and (min-width: $small-screen) {
+//   .alignright {
+//     float: right;
+//     margin-left: $base-spacing/2;
+//   }
+//
+//   .alignleft {
+//     float: left;
+//     margin-right: $base-spacing/2;
+//   }
+// }
+
+.wp-block-image {
+  margin-top: $base-spacing;
+  margin-bottom: $small-spacing;
 }
 
-.alignright,
-.alignleft {
-  clear: both;
-  min-width: 17.5rem;
-  max-width: 50%;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-
-  img {
-    width: 100%;
-    display: block;
-    height: auto;
+@media screen and (max-width: $small-screen) {
+  .wp-block-image .alignright,
+  .wp-block-image .alignleft {
+    float: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 100% !important;
   }
-}
-
-.alignright {
-  float: right;
-  margin-left: $base-spacing/2;
-}
-
-.alignleft {
-  float: left;
-  margin-right: $base-spacing/2;
 }
 
 .embed-responsive {

@@ -79,6 +79,12 @@
     max-width: 100%;
   }
 
+  h2 {
+    margin-top: $base-spacing;
+    font-size: modular-scale(2);
+    color: $blue;
+  }
+
   p {
     margin-bottom: $small-spacing;
   }
@@ -89,14 +95,14 @@
   }
 
   figure {
-    margin-bottom: $base-spacing;
     max-width: 100%;
 
     figcaption {
+      text-align: left;
       padding: $small-spacing/2;
       color: $medium-gray;
-      font-weight: 600;
-      border-bottom: 1px solid $blue;
+      font-weight: 400;
+      border-bottom: 1px solid $feint-gray;
       margin-top: 0;
       margin-bottom: 0;
       font-size: modular-scale(-1);

@@ -45,7 +45,7 @@
         <h2 class="latest-posts--title">Latest news</h2>
         @foreach ( $myposts as $post )
           @php setup_postdata( $post ) @endphp
-          @include('partials.content-'.get_post_type(), ['post_class' => 'latest-post', 'thumbnail_size'=> '16by9-xs'])
+          @include('partials.content-'.get_post_type(), ['post_class' => 'latest-post', 'thumbnail_size'=> 'medium'])
         @endforeach
         @php wp_reset_postdata() @endphp
       </div>

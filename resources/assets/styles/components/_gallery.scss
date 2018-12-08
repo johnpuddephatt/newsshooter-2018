@@ -1,4 +1,6 @@
 .gallery-wrapper {
+  margin-bottom: $base-spacing;
+
   .wp-block-gallery {
     overflow-x: auto;
     flex-wrap: nowrap;
@@ -37,9 +39,9 @@
 }
 
 .wp-block-gallery li {
-  flex: 0 0 3 * $base-spacing;
-  height: 3 * $base-spacing;
-  width: 3 * $base-spacing;
+  flex: 0 0 3 * $base-spacing !important;
+  height: 3 * $base-spacing !important;
+  width: 3 * $base-spacing !important;
   margin: 0 !important;
   padding: 0 !important;
   position: relative;
