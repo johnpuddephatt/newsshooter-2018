@@ -35,6 +35,28 @@
 .wp-block-image {
   margin-top: $base-spacing;
   margin-bottom: $small-spacing;
+
+  a {
+    display: block;
+    position: relative;
+
+    svg {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      height: 0.75 * $base-spacing;
+      width: 0.75 * $base-spacing;
+      margin: 0.25 * $base-spacing;
+    }
+
+    &::after {
+      font-family: "Font Awesome 5 Free", sans-serif;
+      font-weight: 900;
+      content: "\f002";
+      font-size: modular-scale(-1);
+      display: none;
+    }
+  }
 }
 
 @media screen and (max-width: $small-screen) {

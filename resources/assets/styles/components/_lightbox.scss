@@ -1,0 +1,28 @@
+body.lightbox-open {
+  overflow: hidden;
+}
+
+.lightbox-wrapper {
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $dark-gray;
+}
+
+.lightbox-image {
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.lightbox-controls {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: gray;
+}

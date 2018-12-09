@@ -7,6 +7,8 @@ import { faEnvelope, faCommentAlt } from "@fortawesome/free-regular-svg-icons";
 import { config } from '@fortawesome/fontawesome-svg-core';
 
 config.autoAddCss = false;
+config.searchPseudoElements=true;
+
 // add the imported icons to the library
 library.add(faEnvelope, faCommentAlt, faSearch, faFacebookF, faInstagram, faTwitter, faYoutube, faVimeo, faLinkedin, faGooglePlus);
 
