@@ -137,7 +137,7 @@
   }
 
   blockquote {
-    padding: $base-spacing $base-spacing $small-spacing;
+    padding: $base-spacing;
     margin: 0 $base-spacing;
 
     &::before {
@@ -145,7 +145,7 @@
       font-size: modular-scale(6);
       color: $light-blue;
       line-height: 0.1;
-      vertical-align: sub;
+      vertical-align: text-top;
       text-align: left;
       display: inline;
     }
