@@ -1,0 +1,33 @@
+@media screen and (min-width: $small-screen) {
+  .wp-block-pullquote.alignright,
+  .wp-block-pullquote.alignleft {
+    float: right;
+    clear: both;
+    margin: $small-spacing 0 $small-spacing $small-spacing;
+    width: 275px;
+    text-align: right;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .wp-block-pullquote.alignright {
+    blockquote {
+      margin-right: 0;
+      padding-right: 0;
+      border-left: $small-spacing/2 solid $light-blue;
+    }
+  }
+
+  .wp-block-pullquote.alignleft {
+    float: left;
+    text-align: left;
+    margin: $small-spacing/2 $small-spacing $small-spacing 0;
+
+    blockquote {
+      border-right: $small-spacing/2 solid $light-blue;
+      border-left: none;
+      margin-left: 0;
+      padding-left: 0;
+    }
+  }
+}

@@ -103,12 +103,18 @@
       color: $medium-gray;
       font-weight: 400;
       border-bottom: 1px solid $feint-gray;
+      border-bottom: $small-spacing/4 solid $light-blue;
       margin-top: 0;
       margin-bottom: 0;
       font-size: modular-scale(-1);
     }
 
+    a {
+      margin-bottom: 1.25 * $base-spacing;
+    }
+
     a + figcaption {
+      margin-top: -1.25 * $base-spacing;
       padding-right: 1.25 * $base-spacing;
     }
 
@@ -131,8 +137,18 @@
   }
 
   blockquote {
-    border-left: $small-spacing solid $blue;
-    padding: $base-spacing;
+    padding: $base-spacing $base-spacing $small-spacing;
+    margin: 0 $base-spacing;
+
+    &::before {
+      content: '“';
+      font-size: modular-scale(6);
+      color: $light-blue;
+      line-height: 0.1;
+      vertical-align: sub;
+      text-align: left;
+      display: inline;
+    }
   }
 
   cite {

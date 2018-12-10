@@ -155,16 +155,18 @@ $gutterless-grid: (
 .editors-posts--title {
   color: $blue;
   text-transform: uppercase;
-  margin-top: -2 * $base-spacing;
-  margin-left: $small-spacing;
-  margin-bottom: $small-spacing;
+  background-color: #fff;
+  padding-left: $small-spacing;
+  margin-bottom: 0;
+  padding-bottom: $small-spacing;
+  padding-top: $small-spacing;
 
   @media screen and (min-width: $medium-screen) {
-    margin-left: $base-spacing;
+    padding-left: $base-spacing;
   }
 
   @media screen and (min-width: $large-screen) {
-    margin-left: 1.5 * $base-spacing;
+    padding-left: 1.5 * $base-spacing;
   }
 }
 
@@ -191,7 +193,7 @@ $gutterless-grid: (
       display: flex;
     }
 
-    flex: 0 0 33.333%;
+    flex: 0 0 33.28%;
     flex-direction: column;
 
     + .post {
