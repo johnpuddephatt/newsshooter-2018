@@ -9,7 +9,7 @@ body.lightbox-open {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: $dark-gray;
+  background-color: $medium-gray;
 }
 
 .lightbox-image {
@@ -22,7 +22,37 @@ body.lightbox-open {
 
 .lightbox-controls {
   position: absolute;
+  background-color: white;
   right: 0;
   bottom: 0;
-  background-color: gray;
+  top: 0;
+  width: 4 * $base-spacing;
+  border-left: 1px solid $light-gray;
+  padding: $base-spacing $small-spacing;
+  display: flex;
+  flex-direction: column;
+}
+
+.lightbox-control {
+  font-size: modular-scale(3);
+  text-align: center;
+  line-height: 2.75 * $base-spacing;
+  padding: 0;
+  font-weight: 400;
+  background-color: $light-blue;
+  color: black;
+  width: 3 * $base-spacing;
+  height: 3 * $base-spacing;
+  border-radius: 50%;
+  margin-top: $small-spacing;
+  vertical-align: middle;
+
+  &:first-child {
+    margin-bottom: auto;
+    margin-top: 0;
+  }
+
+  &:focus {
+    outline: none;
+  }
 }

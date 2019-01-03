@@ -105,7 +105,8 @@ export default {
       lightboxControls.classList.add('lightbox-controls');
       // Close button
       lightboxClose = document.createElement('button');
-      lightboxClose.innerHTML = 'Close';
+      lightboxClose.innerHTML = '×';
+      lightboxClose.classList.add('lightbox-control');
       lightboxClose.addEventListener('click', ()=>{
         document.body.classList.remove('lightbox-open');
         lightboxWrapper.remove();
@@ -114,7 +115,8 @@ export default {
       if(lightboxImages.length > 1) {
         // Previous button
         lightboxPrevious = document.createElement('button');
-        lightboxPrevious.innerHTML = 'Previous';
+        lightboxPrevious.innerHTML = '«';
+        lightboxPrevious.classList.add('lightbox-control');
         lightboxPrevious.dataset.previous = index - 1;
         lightboxPrevious.addEventListener('click',(e)=>{
           changeImage(e.currentTarget.dataset.previous);
@@ -122,7 +124,8 @@ export default {
         lightboxControls.appendChild(lightboxPrevious);
         // Next button
         lightboxNext = document.createElement('button');
-        lightboxNext.innerHTML = 'Next';
+        lightboxNext.innerHTML = '»';
+        lightboxNext.classList.add('lightbox-control');
         lightboxNext.dataset.next = index + 1;
         lightboxNext.addEventListener('click',(e)=>{
           changeImage(e.currentTarget.dataset.next);

@@ -42,11 +42,21 @@
 
     svg {
       position: absolute;
-      top: 100%;
-      right: 0;
-      height: 0.75 * $base-spacing;
-      width: 0.75 * $base-spacing;
-      margin: 0.25 * $base-spacing;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 2 * $base-spacing;
+      height: 2 * $base-spacing;
+      opacity: 0;
+      transition: opacity $base-timing $base-duration;
+
+      path {
+        fill: white;
+      }
+    }
+
+    &:hover svg {
+      opacity: 0.8;
     }
 
     &::after {

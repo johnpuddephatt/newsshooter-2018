@@ -101,20 +101,14 @@
       text-align: left;
       padding: $small-spacing/2;
       color: $medium-gray;
+      border-bottom: $small-spacing/4 solid $off-white;
       font-weight: 400;
-      border-bottom: 1px solid $feint-gray;
-      border-bottom: $small-spacing/4 solid $light-blue;
       margin-top: 0;
       margin-bottom: 0;
       font-size: modular-scale(-1);
     }
 
-    a {
-      margin-bottom: 1.25 * $base-spacing;
-    }
-
     a + figcaption {
-      margin-top: -1.25 * $base-spacing;
       padding-right: 1.25 * $base-spacing;
     }
 
