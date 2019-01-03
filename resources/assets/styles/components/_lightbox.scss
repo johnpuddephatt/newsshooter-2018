@@ -10,6 +10,9 @@ body.lightbox-open {
   right: 0;
   bottom: 0;
   background-color: $medium-gray;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .lightbox-image {
