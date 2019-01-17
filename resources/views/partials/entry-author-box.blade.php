@@ -10,7 +10,7 @@
           <span class="tag very-small is-dark">{{ get_the_author_meta('user_site_role') }}</span>
         @endif
       </a>
-      <p>{{ nl2br(get_the_author_meta('description')) }}</p>
+      <p>{!! nl2br(get_the_author_meta('description')) !!}</p>
       <nav class="entry--author-box--social">
         @if ( get_the_author_meta('twitter'))
           <a class="" aria-label="Link to author’s Twitter profile" href="{{ esc_url( 'http://twitter.com/' . get_the_author_meta( 'twitter' )) }}">
@@ -40,6 +40,3 @@
       </nav>
     </div>
   </article>
-
-
-

@@ -1,6 +1,6 @@
 <article {{ post_class() }} >
   <header class="entry-header">
-    <a class="entry-category" href="/category/{{ get_the_category()[0]->slug }}">{{ get_the_category()[0]->name }}</a>
+    <a class="entry-category" href="/category/{{ get_the_category()[0]->slug }}">{!! get_the_category()[0]->name !!}</a>
     <h1 class="entry-title">{!! get_the_title() !!}</h1>
     @include('partials/entry-meta')
   </header>
