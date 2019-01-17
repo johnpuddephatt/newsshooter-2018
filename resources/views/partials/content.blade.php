@@ -7,7 +7,7 @@
     @endif
   </a>
   <header class="entry-summary">
-    <a class="entry-category" href="/category/{{ get_the_category()[0]->slug }}">{{ get_the_category()[0]->name }}</a>
+    <a class="entry-category" href="/category/{{ get_the_category()[0]->slug }}">{{ wp_specialchars_decode(get_the_category()[0]->name) }}</a>
     <h2 class="entry-title"><a href="{{ get_permalink() }}">{!! get_the_title() !!}</a></h2>
     @include('partials/entry-meta')
   </header>
