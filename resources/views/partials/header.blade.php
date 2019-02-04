@@ -34,9 +34,38 @@
   </div>
 </header>
 <div class="primary-navigation--wrapper">
-  @if (has_nav_menu('primary_navigation') && is_home() )
-    {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'container navigation primary-navigation']) !!}
-  @endif
+  <div class="container">
+    @if (has_nav_menu('primary_navigation'))
+      {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'navigation primary-navigation']) !!}
+      <div class="menu-link--container">
+        <button class="menu-link">
+          <span class="icon">
+            <i class="fa fa-bars"></i>
+          </span>
+          <span class="sr-only menu-link--text">
+            Menu
+          </span>
+        </button>
+        <div class="menu-form--container">
+          <div class="container">
+            <button class="menu-close">
+              ×
+              <span class="sr-only menu-close--text">
+                Close
+              </span>
+            </button>
+            <img class="popover-logo" src="@asset('images/NS_Logo_Marque.svg')" width="450"/>
+            @if (has_nav_menu('footer_navigation_left'))
+              {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'navigation popover-navigation']) !!}
+            @endif
+            @if (has_nav_menu('footer_navigation_left'))
+              {!! wp_nav_menu(['theme_location' => 'footer_navigation_right', 'menu_class' => 'navigtaion popover-navigation']) !!}
+            @endif
+          </div>
+        </div>
+      </div>
+    @endif
+  </div>
 </div>
 
 <div class="masthead-ad-unit">

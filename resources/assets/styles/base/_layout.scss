@@ -18,6 +18,10 @@ body {
   &.home, &.archive {
     background-color: $off-white;
   }
+
+  &.menu-open {
+    overflow: hidden;
+  }
 }
 
 .sr-only {

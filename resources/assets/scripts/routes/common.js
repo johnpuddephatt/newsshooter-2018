@@ -74,6 +74,50 @@ export default {
 
     }
 
+    /*
+    ** Hamburger
+    */
+
+        function isOverflown(element) {
+            return element.scrollHeight > element.clientHeight;
+        }
+        function checkNavigationOverflow() {
+          const navBar = document.querySelector('.primary-navigation');
+          if( isOverflown(navBar) ) {
+            navBar.classList.add('overflowing');
+          }
+          else {
+            navBar.classList.remove('overflowing');
+            menuButton.classList.remove('open');
+            document.body.classList.remove('menu-open');
+          }
+        }
+
+        window.addEventListener('resize',()=>{
+          checkNavigationOverflow();
+        })
+        document.addEventListener('DOMContentLoaded',()=>{
+          checkNavigationOverflow();
+        })
+        document.addEventListener('load',()=>{
+          checkNavigationOverflow();
+        })
+
+        const menuButton = document.querySelector('.menu-link');
+
+        menuButton.addEventListener('click',()=>{
+          menuButton.classList.add('open');
+          document.body.classList.add('menu-open');
+        })
+
+        const menuClose = document.querySelector('.menu-close');
+
+        menuClose.addEventListener('click',()=>{
+          menuButton.classList.remove('open');
+          document.body.classList.remove('menu-open');
+        })
+
+
     /**
     *** Lightboxes
     **/
