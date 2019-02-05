@@ -78,45 +78,55 @@ export default {
     ** Hamburger
     */
 
-        function isOverflown(element) {
-            return element.scrollHeight > element.clientHeight;
-        }
-        function checkNavigationOverflow(elem) {
-          if( isOverflown(elem) ) {
-            elem.classList.add('overflowing');
-          }
-          else {
-            elem.classList.remove('overflowing');
-            menuButton.classList.remove('open');
-            document.body.classList.remove('menu-open');
-          }
-        }
+    function isOverflown(element) {
+        return element.scrollHeight > element.clientHeight;
+    }
+    console.log('here');
 
-        const navBar = document.querySelector('.primary-navigation');
+
+      const navBar = document.querySelector('.primary-navigation');
+      const menuButton = document.querySelector('.menu-link');
+      console.log('here');
+
+      function checkNavigationOverflow(elem) {
+        if( isOverflown(elem) ) {
+          elem.classList.add('overflowing');
+        }
+        else {
+          elem.classList.remove('overflowing');
+          menuButton.classList.remove('open');
+          document.body.classList.remove('menu-open');
+        }
+      }
+
+      if(navBar && menuButton) {
+        checkNavigationOverflow(navBar);
+        console.log('DOM event');
 
         window.addEventListener('resize',()=>{
           checkNavigationOverflow(navBar);
-        })
-        document.addEventListener('DOMContentLoaded',()=>{
-          checkNavigationOverflow(navBar);
-        })
-        document.addEventListener('load',()=>{
-          checkNavigationOverflow(navBar);
-        })
+        });
 
-        const menuButton = document.querySelector('.menu-link');
+
+        window.addEventListener('load',()=>{
+          checkNavigationOverflow(navBar);
+          console.log('load event');
+        });
 
         menuButton.addEventListener('click',()=>{
           menuButton.classList.add('open');
           document.body.classList.add('menu-open');
-        })
+        });
 
         const menuClose = document.querySelector('.menu-close');
-
         menuClose.addEventListener('click',()=>{
           menuButton.classList.remove('open');
           document.body.classList.remove('menu-open');
-        })
+        });
+
+      }
+
+
 
 
     /**
