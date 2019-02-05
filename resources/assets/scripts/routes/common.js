@@ -81,26 +81,27 @@ export default {
         function isOverflown(element) {
             return element.scrollHeight > element.clientHeight;
         }
-        function checkNavigationOverflow() {
-          const navBar = document.querySelector('.primary-navigation');
-          if( isOverflown(navBar) ) {
-            navBar.classList.add('overflowing');
+        function checkNavigationOverflow(elem) {
+          if( isOverflown(elem) ) {
+            elem.classList.add('overflowing');
           }
           else {
-            navBar.classList.remove('overflowing');
+            elem.classList.remove('overflowing');
             menuButton.classList.remove('open');
             document.body.classList.remove('menu-open');
           }
         }
 
+        const navBar = document.querySelector('.primary-navigation');
+
         window.addEventListener('resize',()=>{
-          checkNavigationOverflow();
+          checkNavigationOverflow(navBar);
         })
         document.addEventListener('DOMContentLoaded',()=>{
-          checkNavigationOverflow();
+          checkNavigationOverflow(navBar);
         })
         document.addEventListener('load',()=>{
-          checkNavigationOverflow();
+          checkNavigationOverflow(navBar);
         })
 
         const menuButton = document.querySelector('.menu-link');
