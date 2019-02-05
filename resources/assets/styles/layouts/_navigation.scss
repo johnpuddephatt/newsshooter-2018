@@ -115,7 +115,6 @@
   background-color: white;
   border-bottom: $base-border;
   margin-bottom: $small-spacing;
-  padding-bottom: $small-spacing;
 
   @media screen and (min-width: $xl-screen) {
     margin-bottom: $base-spacing;
@@ -128,6 +127,7 @@
     align-items: center;
     padding-left: $small-spacing;
     padding-right: $small-spacing;
+    margin-bottom: $small-spacing;
 
     @media screen and (min-width: $medium-screen) {
       padding-left: $base-spacing;

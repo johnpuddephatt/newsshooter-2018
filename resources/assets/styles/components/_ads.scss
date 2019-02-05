@@ -1,8 +1,8 @@
 [id^=div-gpt-ad] {
-  margin: 0 auto $small-spacing;
+  margin: $small-spacing auto;
 
   @media screen and (min-width: $xl-screen) {
-    margin: 0 auto $base-spacing;
+    margin: $base-spacing auto;
   }
 }
 
