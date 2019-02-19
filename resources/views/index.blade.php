@@ -80,15 +80,17 @@
         $acs->query_posts(array('group_name' => 'Reviews'))
       @endphp
 
-      <div class="editors-posts">
-        <h2 class="editors-posts--title">Latest Reviews</h2>
-        <div class="editors-posts--wrap">
-          @while (have_posts())
-            @php the_post() @endphp
-            @include('partials.content-'.get_post_type(), ['post_class' => 'featured-post','thumbnail_size' => 'medium_large'])
-          @endwhile
+      @if(have_posts())
+        <div class="editors-posts">
+          <h2 class="editors-posts--title">Latest Reviews</h2>
+          <div class="editors-posts--wrap">
+            @while (have_posts())
+              @php the_post() @endphp
+              @include('partials.content-'.get_post_type(), ['post_class' => 'featured-post','thumbnail_size' => 'medium_large'])
+            @endwhile
+          </div>
         </div>
-      </div>
+      @endif
 
       @php wp_reset_query(); @endphp
 
