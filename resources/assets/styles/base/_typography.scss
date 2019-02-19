@@ -48,6 +48,10 @@ a {
   }
 }
 
+body.mousedown a:focus {
+  outline: none;
+}
+
 hr {
   border-bottom: $base-border;
   border-left: 0;

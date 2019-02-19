@@ -5,6 +5,17 @@ export default {
   finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired
 
+    let body = document.body;
+    body.addEventListener('mousedown',()=>{
+      body.classList.add('mousedown');
+    });
+
+    body.addEventListener('keyup',(e)=>{
+      if(e.which == 9) {
+        body.classList.remove('mousedown');
+      }
+    })
+
     /**
     *** Search
     **/
