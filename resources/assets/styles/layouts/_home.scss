@@ -143,7 +143,7 @@ $gutterless-grid: (
     @include grid-column(4,$gutterless-grid);
 
     display: block;
-    padding-top: $base-spacing;
+    // padding-top: $base-spacing;
   }
 
   &__part-two {

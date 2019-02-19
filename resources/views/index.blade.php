@@ -63,7 +63,7 @@
       @endif
 
     </div>
-    <div class="homepage-sidebar homepage-sidebar__part-two">
+    <div class="homepage-sidebar homepage-sidebar__part-one">
       @php dynamic_sidebar('sidebar-primary') @endphp
       @if(is_paged() || !is_home())
         @php dynamic_sidebar('sidebar-secondary') @endphp
