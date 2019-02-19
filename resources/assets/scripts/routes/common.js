@@ -81,12 +81,9 @@ export default {
     function isOverflown(element) {
         return element.scrollHeight > element.clientHeight;
     }
-    console.log('here');
-
 
       const navBar = document.querySelector('.primary-navigation');
       const menuButton = document.querySelector('.menu-link');
-      console.log('here');
 
       function checkNavigationOverflow(elem) {
         if( isOverflown(elem) ) {
@@ -101,16 +98,13 @@ export default {
 
       if(navBar && menuButton) {
         checkNavigationOverflow(navBar);
-        console.log('DOM event');
 
         window.addEventListener('resize',()=>{
           checkNavigationOverflow(navBar);
         });
 
-
         window.addEventListener('load',()=>{
           checkNavigationOverflow(navBar);
-          console.log('load event');
         });
 
         menuButton.addEventListener('click',()=>{

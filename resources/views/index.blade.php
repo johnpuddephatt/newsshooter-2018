@@ -39,7 +39,7 @@
   <div class="home-section home-section__part-one">
     <div class="latest-posts latest-posts__home latest-posts__part-one">
       @if(is_front_page())
-        <h2 class="latest-posts--title">Latest news</h2>
+        <h2 class="latest-posts--title">Latest Articles</h2>
       @else
         @include('partials.page-header')
       @endif
@@ -77,11 +77,11 @@
 
       @php
         $acs = new Acs();
-        $acs->query_posts(array('group_name' => 'Editors picks'))
+        $acs->query_posts(array('group_name' => 'Reviews'))
       @endphp
 
       <div class="editors-posts">
-        <h2 class="editors-posts--title">Editor’s picks</h2>
+        <h2 class="editors-posts--title">Latest Reviews</h2>
         <div class="editors-posts--wrap">
           @while (have_posts())
             @php the_post() @endphp

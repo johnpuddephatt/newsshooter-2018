@@ -148,7 +148,7 @@
   padding: 0;
   margin: 0 $small-spacing;
   height: 2em;
-  line-height: 2em;
+  line-height: 1.99em;
   overflow: hidden;
   text-align: center;
 
@@ -163,6 +163,7 @@
     text-decoration: none;
     display: inline-block;
     font-weight: 600;
+    font-size: modular-scale(0);
 
     &:hover {
       color: $black;

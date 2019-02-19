@@ -50,8 +50,6 @@
         @php wp_reset_postdata() @endphp
       </div>
 
-
-
         @php dynamic_sidebar('after-comments') @endphp
         @php do_action('after_comments') @endphp
       </div>
