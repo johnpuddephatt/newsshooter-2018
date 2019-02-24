@@ -86,7 +86,7 @@
           <div class="editors-posts--wrap">
             @while (have_posts())
               @php the_post() @endphp
-              @include('partials.content-'.get_post_type(), ['post_class' => 'featured-post','thumbnail_size' => 'medium_large'])
+              @include('partials.content-'.get_post_type(), ['post_class' => 'featured-post','thumbnail_size' => '16by9-s'])
             @endwhile
           </div>
         </div>

@@ -13,7 +13,7 @@
         </div>
       @elseif( has_post_thumbnail() )
         <div class="entry-image">
-          {{ the_post_thumbnail( 'large' ) }}
+          {{ the_post_thumbnail( '16by9-l' ) }}
         </div>
       @endif
       <div class="entry-content--inner">

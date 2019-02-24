@@ -149,6 +149,9 @@ add_image_size( '4by3-m', 800, 600, true ); // Featured image #1
 add_image_size( '4by3-s', 400, 300, true ); // Featured image #2
 add_image_size( '4by3-xs', 200, 150, true );
 
+add_image_size('16by9-s', 480, 270, true ); // duplicates medium_large but medium_large won't show in image cropper...
+add_image_size( '16by9-l', 740, 416, true ); // duplicates large but medium_large won't show in image cropper...
+
 // add_image_size( '16by9-xl', 1600, 900, true );
 // add_image_size( '16by9-l', 1200, 675, true );
 // add_image_size( '16by9-m', 800, 450, true );
