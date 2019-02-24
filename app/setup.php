@@ -177,7 +177,7 @@ function more_post_ajax(){
   }
 
   while ($loop->have_posts()) { $loop->the_post();
-    echo \App\template('partials.content-'.get_post_type(), ['post_class' => 'latest-post','thumbnail_size' => '16by9-xs']);
+    echo \App\template('partials.content-'.get_post_type(), ['post_class' => 'latest-post','thumbnail_size' => 'thumbnail']);
     };
 
 
