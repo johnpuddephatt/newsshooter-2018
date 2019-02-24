@@ -6,7 +6,7 @@
   @endif
 
   <div class="entry-byline">
-    @if (get_the_author_meta('first_name') or get_the_author_meta('last_name'))
+    @if ((get_the_author_meta('nickname') != 'newsshooter') && (get_the_author_meta('first_name') or get_the_author_meta('last_name')))
         @if(is_single($post->ID))
           <div class="entry-byline--image">
             {!! get_avatar(get_the_author_meta( 'ID' ), 64, '' , 'Image of' . get_the_author_meta('first_name') . get_the_author_meta('last_name') , array('class' => 'is-rounded') ) !!}
