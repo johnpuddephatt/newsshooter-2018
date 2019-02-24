@@ -23,7 +23,7 @@
           {!! the_content() !!}
         </div>
         @php do_action('after_content') @endphp
-        @if ((get_the_author_meta('nickname') != 'newsshooter') && (get_the_author_meta('first_name') or get_the_author_meta('last_name')))
+        @if ((get_the_author_meta('nickname') != 'Newsshooter') && (get_the_author_meta('first_name') or get_the_author_meta('last_name')))
           @include('partials/entry-author-box')
         @endif
         <footer>
