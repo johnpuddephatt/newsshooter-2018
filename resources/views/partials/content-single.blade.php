@@ -7,7 +7,7 @@
   <div class="entry-content-wrapper">
 
     <div class="entry-content">
-      @if( has_post_video() )
+      @if( function_exists('has_post_video') && has_post_video() )
         <div class="entry-video embed-responsive embed-responsive-16by9">
           {{ the_post_video() }}
         </div>
