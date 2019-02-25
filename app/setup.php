@@ -176,6 +176,7 @@ function more_post_ajax(){
       echo '<br>';
       echo '<div id="div-gpt-ad-1541642158566-' . ($args['paged'] + 4) . '" class="dfp-ad-unit" style="height:100px; width:320px;">';
       echo '<script>gptAdSlots.push(googletag.defineSlot("/98779178/POSITION_A_MAINCOLUMN", [320, 100], "div-gpt-ad-1541642158566-' . ($args['paged'] + 4) . ').defineSizeMapping(mainColumnAmapping).addService(googletag.pubads());)</script>';
+      echo '<script>console.log("hello")</script>';
       echo '</div>';
   }
 
