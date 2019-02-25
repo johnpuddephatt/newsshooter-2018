@@ -185,7 +185,9 @@ function more_post_ajax(){
 
   echo '<script>';
   echo 'window.DISQUSWIDGETS = undefined;';
-  echo 'jQuery.getScript("https://" + disqus_shortname + ".disqus.com/count.js");';
+  echo 'setTimeout(
+          function() { window.jQuery.getScript("https://" + disqus_shortname + ".disqus.com/count.js"), 1000
+        })';
   echo '</script>';
 
   exit;
