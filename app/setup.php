@@ -183,6 +183,10 @@ function more_post_ajax(){
     echo \App\template('partials.content-'.get_post_type(), ['post_class' => 'latest-post','thumbnail_size' => 'thumbnail']);
     };
 
+  echo '<script>';
+  echo 'window.DISQUSWIDGETS = undefined;';
+  echo 'jQuery.getScript("https://" + disqus_shortname + ".disqus.com/count.js");';
+  echo '</script>';
 
   exit;
  }
