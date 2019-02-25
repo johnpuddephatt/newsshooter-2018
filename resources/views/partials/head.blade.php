@@ -59,5 +59,8 @@
       googletag.enableServices();
     });
   </script>
+  <script>
+    disqus_shortname='newsshooter';
+  </script>
   @php wp_head() @endphp
 </head>
