@@ -184,6 +184,7 @@ function more_post_ajax(){
     };
 
   echo '<script>';
+  echo 'console.log("attempting refresh");';
   echo 'window.DISQUSWIDGETS = undefined;';
   echo 'setTimeout(
           function() { window.jQuery.getScript("https://" + disqus_shortname + ".disqus.com/count.js"), 1000
