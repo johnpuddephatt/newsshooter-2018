@@ -184,7 +184,7 @@ function more_post_ajax(){
     echo \App\template('partials.content-'.get_post_type(), ['post_class' => 'latest-post','thumbnail_size' => 'thumbnail']);
     };
 
-  echo '<script>window.FOO = 'bar';console.log("attempting refresh");window.DISQUSWIDGETS = undefined;setTimeout(function() { window.jQuery.getScript("https://" + disqus_shortname + ".disqus.com/count.js"), 1000})</script>';
+  // echo '<script>window.FOO = 'bar';console.log("attempting refresh");window.DISQUSWIDGETS = undefined;setTimeout(function() { window.jQuery.getScript("https://" + disqus_shortname + ".disqus.com/count.js"), 1000})</script>';
 
   exit;
  }
