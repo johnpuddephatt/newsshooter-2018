@@ -30,6 +30,8 @@ export default {
           ajaxButton.dataset.page = (parseInt(page) + 1);
           timeago().render(document.querySelectorAll('.timeago'));
           window.googletag.pubads().refresh();
+          window.DISQUSWIDGETS = undefined;
+          window.jQuery.getScript("https://" + window.disqus_shortname + ".disqus.com/count.js");
         } else {
           ajaxButton.removeAttribute("disabled");
           ajaxButton.innerText = ajaxButton.dataset.defaultText;
