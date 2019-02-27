@@ -206,7 +206,7 @@ add_filter('default_hidden_meta_boxes',function(){
  */
 add_filter('the_content', function($content){
   // $pattern = '~<iframe.*</iframe>|<embed.*</embed>~';
-  $pattern = '~<iframe.*www\.youtube\.com\/embed\/.*</iframe>~';
+  $pattern = '~<iframe.*youtube\.com\/embed\/.*</iframe>|<iframe.*player\.vimeo\.com.*</iframe>~';
   // $pattern = '/<iframe.*?src="http:\/\/www\.youtube\.com\/embed\/(.*)".*?\/iframe>/si';
 
   preg_match_all($pattern, $content, $matches);
