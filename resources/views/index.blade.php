@@ -4,6 +4,10 @@
 
   @php
     $do_not_duplicate = [];
+    $acs = new Acs();
+    $featured_ids = $acs->get_post_ids('Featured');
+    $reviews_ids =  $acs->get_post_ids('Reviews');
+    $do_not_duplicate = array_merge($featured_ids,$reviews_ids);
     $loop_index = 0;
   @endphp
 
@@ -14,12 +18,11 @@
       $acs->query_posts(array('group_name' => 'Featured'));
     @endphp
 
-
     <div class="featured-posts">
       @while (have_posts())
         @php the_post() @endphp
         @include('partials.content-'.get_post_type(), ['post_class' => 'featured-post featured-post__' . ($wp_query->current_post + 1),'thumbnail_size' => (($wp_query->current_post >= 1) ? '4by3-s' : '4by3-m')])
-        @php $do_not_duplicate[] = get_the_id() @endphp
+        {{-- @php $do_not_duplicate[] = get_the_id() @endphp --}}
       @endwhile
     </div>
 
@@ -87,14 +90,13 @@
             @while (have_posts())
               @php the_post() @endphp
               @include('partials.content-'.get_post_type(), ['post_class' => 'featured-post','thumbnail_size' => '16by9-s'])
+              {{-- @php $do_not_duplicate[] = get_the_id() @endphp --}}
             @endwhile
           </div>
         </div>
       @endif
 
       @php wp_reset_query(); @endphp
-
-
 
     <div class="home-section home-section__part-two">
       <div class="latest-posts latest-posts__home latest-posts__part-two">
