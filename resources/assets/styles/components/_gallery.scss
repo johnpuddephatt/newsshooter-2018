@@ -6,6 +6,7 @@
     flex-wrap: nowrap;
     margin: 0;
     padding: 0 0 $small-spacing/2;
+    border-bottom: $small-spacing/4 solid $off-white;
   }
 }
 
@@ -32,9 +33,11 @@
     position: absolute;
     bottom: 0;
     left: 0;
+    right: 0;
     z-index: 9;
     background-color: #455e6a;
     color: #fff !important;
+    border-bottom: none;
 
     a {
       color: #fff;

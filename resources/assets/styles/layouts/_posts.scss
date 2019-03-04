@@ -113,9 +113,9 @@
       font-size: modular-scale(-1);
     }
 
-    a + figcaption {
-      padding-right: 1.25 * $base-spacing;
-    }
+    // a + figcaption {
+    //   padding-right: 1.25 * $base-spacing;
+    // }
 
     img {
       display: block;
