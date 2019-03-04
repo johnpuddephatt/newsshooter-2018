@@ -139,7 +139,7 @@ add_action('widgets_init', function () {
 **/
 
 // re-setting large and medium sizes here allows us to enforce hard cropping.
-add_image_size('large', get_option( 'large_size_w' ), get_option( 'large_size_h' ), true ); // 740 x 416px; Featured image on post, large in-post images
+add_image_size('large', get_option( 'large_size_w' ), get_option( 'large_size_h' ) ); // 740 x 416px; Featured image on post, large in-post images
 add_image_size('medium_large', 480, 270, true );
 add_image_size('medium', get_option( 'medium_size_w' ), get_option( 'medium_size_h' ) ); // In-post images
 
@@ -150,7 +150,7 @@ add_image_size( '4by3-s', 400, 300, true ); // Featured image #2
 add_image_size( '4by3-xs', 200, 150, true );
 
 add_image_size('16by9-s', 480, 270, true ); // duplicates medium_large but medium_large won't show in image cropper...
-add_image_size( '16by9-l', 740, 416, true ); // duplicates large but medium_large won't show in image cropper...
+add_image_size( '16by9-l', 740, 416, true ); // duplicates large but large won't show in image cropper...
 
 // add_image_size( '16by9-xl', 1600, 900, true );
 // add_image_size( '16by9-l', 1200, 675, true );
