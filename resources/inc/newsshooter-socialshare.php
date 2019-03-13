@@ -12,7 +12,7 @@ function newsshooter_socialshare() {
 		$sURL = get_permalink();
         $title = wp_title('–',false,'right');
         $page_title = str_replace('&', '%26', $title);
-		$page_title = html_entity_decode($title, ENT_COMPAT, 'UTF-8');
+		// $page_title = html_entity_decode($title, ENT_COMPAT, 'UTF-8');
 
 		$socialicons = [];
 
