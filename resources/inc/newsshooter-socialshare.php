@@ -10,7 +10,7 @@ add_action('before_content', 'newsshooter_socialshare', 14);
 function newsshooter_socialshare() {
 	if( is_single() ) {
 		$sURL = get_permalink();
-        $title = wp_title('');
+        $title = wp_title('–',false,'right');
         $page_title = str_replace('&', '%26', $title);
 		$page_title = html_entity_decode($title, ENT_COMPAT, 'UTF-8');
 
