@@ -10,7 +10,7 @@ add_action('before_content', 'newsshooter_socialshare', 14);
 function newsshooter_socialshare() {
 	if( is_single() ) {
 		$sURL = get_permalink();
-		$page_title = rawurlencode(wp_title('–',false,'right'));
+		$page_title = rawurlencode(html_entity_decode(wp_title('–',false,'right')));
 
 		$socialicons = [];
 
