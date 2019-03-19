@@ -29,7 +29,7 @@ body.lightbox-open {
   right: 0;
   bottom: 0;
   top: 0;
-  width: 4 * $base-spacing;
+  width: 2.5 * $base-spacing;
   border-left: 1px solid $light-gray;
   padding: $base-spacing $small-spacing;
   display: flex;
@@ -39,16 +39,16 @@ body.lightbox-open {
 .lightbox-control {
   font-size: modular-scale(3);
   text-align: center;
-  line-height: 2.75 * $base-spacing;
+  line-height: 1.5 * $base-spacing;
   padding: 0;
   font-weight: 400;
   background-color: $light-blue;
   color: black;
-  width: 3 * $base-spacing;
-  height: 3 * $base-spacing;
+  width: 1.5 * $base-spacing;
+  height: 1.5 * $base-spacing;
   border-radius: 50%;
   margin-top: $small-spacing;
-  vertical-align: middle;
+  vertical-align: super;
 
   &:first-child {
     margin-bottom: auto;

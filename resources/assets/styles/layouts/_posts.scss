@@ -138,8 +138,8 @@
   }
 
   blockquote {
-    padding: $base-spacing;
-    margin: 0 $base-spacing;
+    padding: $base-spacing !important;
+    margin: 0 $base-spacing !important;
 
     &::before {
       content: '“';

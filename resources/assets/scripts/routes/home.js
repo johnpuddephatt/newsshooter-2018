@@ -31,7 +31,12 @@ export default {
           timeago().render(document.querySelectorAll('.timeago'));
           window.googletag.pubads().refresh();
           window.DISQUSWIDGETS = undefined;
-          window.jQuery.getScript("https://" + window.disqus_shortname + ".disqus.com/count.js");
+          // window.jQuery.getScript("https://" + window.disqus_shortname + ".disqus.com/count.js");
+          var count_script = document.createElement('script');
+          count_script.src = "https://" + window.disqus_shortname + ".disqus.com/count.js";
+          count_script.async = true;
+          document.getElementsByTagName('head')[0].appendChild(count_script);
+
         } else {
           ajaxButton.removeAttribute("disabled");
           ajaxButton.innerText = ajaxButton.dataset.defaultText;

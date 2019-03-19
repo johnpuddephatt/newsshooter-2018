@@ -151,7 +151,12 @@ export default {
     *** Lightboxes
     **/
 
-    let lightboxImages = document.querySelectorAll('figure a');
+    let allLinkedImages = document.querySelectorAll('figure a');
+    let lightboxImages = Array.from(allLinkedImages).filter(function(el) {
+      console.log(el);
+      var a = new RegExp('/' + window.location.host + '/');
+      return a.test(el.href)
+    });
     if(lightboxImages) {
       lightboxImages.forEach((lightboxImage, index) => {
         lightboxImage.addEventListener('click', (e)=>{
