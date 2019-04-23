@@ -225,11 +225,11 @@ $gutterless-grid: (
       }
 
       @media screen and (min-width: $medium-screen) {
-        font-size: modular-scale(-1);
+        font-size: modular-scale(-2);
       }
 
       @media screen and (min-width: $xl-screen) {
-        font-size: modular-scale(0);
+        font-size: modular-scale(-1);
       }
     }
   }
@@ -333,7 +333,7 @@ $gutterless-grid: (
         position: absolute;
         width: 100%;
         bottom: 0;
-        background-color: rgba(255, 255, 255, 0.95);
+        background-color: rgba(255, 255, 255, 0.8);
         padding: $small-spacing $small-spacing;
       }
     }
@@ -373,11 +373,11 @@ $gutterless-grid: (
         }
 
         @media screen and (min-width: $medium-screen) {
-          font-size: modular-scale(-1);
+          font-size: modular-scale(-2);
         }
 
         @media screen and (min-width: $xl-screen) {
-          font-size: modular-scale(0);
+          font-size: modular-scale(-1);
         }
       }
     }

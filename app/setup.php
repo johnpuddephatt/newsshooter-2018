@@ -56,6 +56,7 @@ add_action('after_setup_theme', function () {
         'primary_navigation' => __('Primary Navigation', 'sage'),
         'editors_picks' => __('Editor’s Picks', 'sage'),
         'footer_navigation_left' => __('Footer Navigation Left', 'sage'),
+        'footer_navigation_center' => __('Footer Navigation Center', 'sage'),
         'footer_navigation_right' => __('Footer Navigation Right', 'sage')
     ]);
 

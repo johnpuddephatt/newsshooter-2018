@@ -61,6 +61,11 @@
             {!! wp_nav_menu(['theme_location' => 'footer_navigation_left', 'menu_class' => 'nav']) !!}
           @endif
         </nav>
+        <nav class="site-footer--nav-middle">
+          @if (has_nav_menu('footer_navigation_center'))
+            {!! wp_nav_menu(['theme_location' => 'footer_navigation_center', 'menu_class' => 'nav']) !!}
+          @endif
+        </nav>
         <div class="site-footer--nav-right">
           @if (has_nav_menu('footer_navigation_left'))
             {!! wp_nav_menu(['theme_location' => 'footer_navigation_right', 'menu_class' => 'nav']) !!}

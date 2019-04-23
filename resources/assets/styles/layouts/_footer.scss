@@ -66,6 +66,7 @@
 }
 
 .site-footer--nav-left,
+.site-footer--nav-middle,
 .site-footer--nav-right {
   order: -1;
   margin-top: $small-spacing;
@@ -86,6 +87,6 @@
 
 .site-footer--nav-left {
   @media screen and (min-width: $medium-screen) {
-    @include grid-push(3);
+    @include grid-push(1);
   }
 }

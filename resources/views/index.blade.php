@@ -4,14 +4,17 @@
 
   @php
     $do_not_duplicate = [];
-    $acs = new Acs();
-    $featured_ids = $acs->get_post_ids('Featured');
-    $reviews_ids =  $acs->get_post_ids('Reviews');
-    $do_not_duplicate = array_merge($featured_ids,$reviews_ids);
-    $loop_index = 0;
   @endphp
 
   @if(is_home() && !is_paged())
+    @php
+      $acs = new Acs();
+      $featured_ids = $acs->get_post_ids('Featured');
+      $reviews_ids =  $acs->get_post_ids('Reviews');
+      $do_not_duplicate = array_merge($featured_ids,$reviews_ids);
+      $loop_index = 0;
+    @endphp
+
     @php
       global $wp_query;
       $acs = new Acs();
