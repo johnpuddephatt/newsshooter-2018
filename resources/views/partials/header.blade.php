@@ -36,7 +36,7 @@
 </header>
 
 <div class="primary-navigation--wrapper">
-  @if (is_home())
+  @if (!is_single())
     <div class="container">
       @if (has_nav_menu('primary_navigation'))
         {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'navigation primary-navigation']) !!}
