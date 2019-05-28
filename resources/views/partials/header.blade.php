@@ -18,7 +18,7 @@
       </div>
 
       <a class="header--home-link" href="{{ home_url('/') }}">
-        <img src="@asset('images/NS_Logo.svg')" width="250"/>
+        <img src="@asset('images/NS_Logo_10years_simplified.svg')" width="250"/>
       </a>
 
       <div class="header--newsletter-link--container">
