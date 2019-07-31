@@ -17,6 +17,7 @@ body.page .main {
     @include grid-column(8);
     @include grid-shift(2);
 
+    float: none;
     padding-left: 0;
     padding-right: 0;
   }
