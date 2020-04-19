@@ -1,3 +1,14 @@
+@if(get_option('sitewidebanner'))
+  <div class="site-wide-banner">
+    <div class="container">
+      {{ get_option('sitewidebanner') }}
+      @if(get_option('sitewidebanner_link_text') && get_option('sitewidebanner_link_url'))
+      <a href="{{ get_option('sitewidebanner_link_url') }}">{{ get_option('sitewidebanner_link_text') }} &rarr;</a>
+      @endif
+    </div>
+  </div>
+@endif
+
 <header class="header">
   <div class="container">
     <div class="header--inner">

@@ -1,0 +1,15 @@
+.site-wide-banner {
+  text-align: center;
+  line-height: $heading-line-height;
+  padding: $small-spacing 0;
+  background-color: $blue;
+  color: white;
+
+  a {
+    display: inline-block;
+    font-weight: 600;
+    text-decoration: underline;
+    padding-left: $small-spacing/2;
+    color: white;
+  }
+}
