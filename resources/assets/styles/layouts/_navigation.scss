@@ -2,6 +2,12 @@
   display: none;
 }
 
+.menu-item-type-custom a {
+  background-color: $feint-gray;
+  padding: 0 $small-spacing/2;
+  border-radius: $base-border-radius;
+}
+
 .menu-form--container {
   position: fixed;
   top: 0;
@@ -164,12 +170,6 @@
     display: inline-block;
     font-weight: 600;
     font-size: modular-scale(0);
-
-    .menu-item-type-custom & {
-      background-color: $feint-gray;
-      padding: 0 $small-spacing/2;
-      border-radius: $base-border-radius;
-    }
 
     &:hover {
       color: $black;
