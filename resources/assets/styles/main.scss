@@ -29,3 +29,9 @@
 @import 'layouts/navigation';
 @import 'layouts/prefooter';
 @import 'layouts/footer';
+
+.primary-navigation--wrapper .menu-item-type-custom a {
+  background-color: $feint-gray;
+  padding: 0 $small-spacing;
+  border-radius: $base-border-radius;
+}
