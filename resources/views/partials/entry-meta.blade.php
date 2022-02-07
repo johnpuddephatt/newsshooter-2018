@@ -31,9 +31,7 @@
       >{{ get_the_date() }}</time
     >
     <div class="entry-byline--comments">
-      <a href="{{ get_permalink() }}#disqus_thread"
-        ><i class="far fa-comment-alt"></i
-      ></a>
+      <i class="far fa-comment-alt"></i>
       <!-- <a
         class="entry-comment-count"
         data-disqus-identifier="{{
