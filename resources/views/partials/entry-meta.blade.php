@@ -32,17 +32,17 @@
     >
     <div class="entry-byline--comments">
       <i class="far fa-comment-alt"></i>
-      <!-- <a
+      <a
         class="entry-comment-count"
-        data-disqus-identifier="{{
+        data-disqus-identifier="https://www.newsshooter.com/?p={{
           get_the_ID()
-        }} https://www.newsshooter.com/?p={{ get_the_ID() }}"
+        }}"
         href="{{ get_permalink() }}#disqus_thread"
         >&nbsp;</a
-      > -->
-      <a class="entry-comment-count" href="{{ get_permalink() }}#disqus_thread"
-        >&nbsp;</a
       >
+      <!-- <a class="entry-comment-count" href="{{ get_permalink() }}#disqus_thread"
+        >&nbsp;</a
+      > -->
     </div>
   </div>
 </div>
