@@ -38,8 +38,8 @@
           get_the_ID()
         }} https://www.newsshooter.com/?p={{ get_the_ID() }}"
         href="{{ get_permalink() }}#disqus_thread"
+        >&nbsp;</a
       >
-      </a>
     </div>
   </div>
 </div>
