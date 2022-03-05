@@ -144,7 +144,7 @@
     margin: 0 $base-spacing !important;
 
     &::before {
-      content: '“';
+      content: "“";
       font-size: modular-scale(6);
       color: $light-blue;
       line-height: 0.1;

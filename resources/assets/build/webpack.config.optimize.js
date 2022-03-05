@@ -2,14 +2,14 @@
 
 const { default: ImageminPlugin } = require('imagemin-webpack-plugin');
 const imageminMozjpeg = require('imagemin-mozjpeg');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
 const config = require('./config');
 
 module.exports = {
   plugins: [
     new ImageminPlugin({
-      optipng: { optimizationLevel: 7 },
+      optipng: { optimizationLevel: 2 },
       gifsicle: { optimizationLevel: 3 },
       pngquant: { quality: '65-90', speed: 4 },
       svgo: {
@@ -22,14 +22,13 @@ module.exports = {
       plugins: [imageminMozjpeg({ quality: 75 })],
       disable: (config.enabled.watcher),
     }),
-    new UglifyJsPlugin({
-      uglifyOptions: {
-        ecma: 5,
-        compress: {
-          warnings: true,
-          drop_console: true,
-        },
-      },
-    }),
   ],
+  optimization: {
+    minimize: true,
+    minimizer: [
+      new TerserPlugin({
+        extractComments: false,
+      }),
+    ],
+  },
 };

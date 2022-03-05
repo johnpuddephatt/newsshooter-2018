@@ -53,6 +53,7 @@
       gptAdSlots[9] = googletag.defineSlot('/98779178/POSITION_A_MAINCOLUMN', [320, 100], 'div-gpt-ad-1541642158566-9').defineSizeMapping(mainColumnAmapping).addService(googletag.pubads());
       gptAdSlots[10] = googletag.defineSlot('/98779178/POSITION_A_MAINCOLUMN', [320, 100], 'div-gpt-ad-1541642158566-10').defineSizeMapping(mainColumnAmapping).addService(googletag.pubads());
 
+      gptAdSlots[11] = googletag.defineSlot('/98779178/POSITION_D_SIDEBAR', [300, 250], 'div-gpt-ad-1646498146609-0').defineSizeMapping(sidebarAmapping).addService(googletag.pubads());
 
       googletag.pubads().enableSingleRequest();
       googletag.pubads().collapseEmptyDivs();

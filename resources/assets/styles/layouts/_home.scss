@@ -1,6 +1,6 @@
 $gutterless-grid: (
   columns: 12,
-  gutter: 0
+  gutter: 0,
 );
 
 .home-wrapper {
@@ -35,7 +35,7 @@ $gutterless-grid: (
     }
 
     @media screen and (min-width: $large-screen) {
-      @include grid-column(8,$gutterless-grid);
+      @include grid-column(8, $gutterless-grid);
 
       padding: 2 * $base-spacing 1.5 * $base-spacing;
     }
@@ -140,7 +140,7 @@ $gutterless-grid: (
   display: none;
 
   @media screen and (min-width: $large-screen) {
-    @include grid-column(4,$gutterless-grid);
+    @include grid-column(4, $gutterless-grid);
 
     display: block;
     // padding-top: $base-spacing;
@@ -426,13 +426,17 @@ $gutterless-grid: (
         @include grid-column(8, $gutterless-grid);
 
         &::after {
-          content: '';
+          content: "";
           position: absolute;
           bottom: 0;
           left: 0;
           right: 0;
           height: 30%;
-          background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+          background-image: linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0)
+          );
         }
       }
 
